@@ -4,15 +4,18 @@
     <title>Mocha Tests</title>
     <link href="lib/mocha.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Eagle+Lake&display=swap" rel="stylesheet">
 </head>
 <body>
 
 
   <!-- 👍 YOUR HTML HERE 👍 -->
-<img id="inn" src="./img/old-world-tavern.jpg">
-<img id="dagger" src="./img/dagger.jpg">
-<img id="bag" src="./img/old-pouch.jpg">
-
+<div id="imgSection">
+  <img id="inn" src="./img/old-world-tavern.jpg">
+  <img id="dagger" src="./img/dagger.jpg">
+  <img id="bag" src="./img/old-pouch.jpg">
+  <div id="stats"></div>
+</div>
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>

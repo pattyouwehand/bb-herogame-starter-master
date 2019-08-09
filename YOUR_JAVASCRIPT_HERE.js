@@ -17,6 +17,7 @@ function rest(obj){
 const inn = document.getElementById("inn");
 inn.onclick = function(){
     rest(hero);
+    displayStats(hero);
 };
 
 function pickUpItem(hero, weapon){
@@ -27,6 +28,7 @@ const dagger = document.getElementById("dagger");
 const daggerObj = {type: 'dagger', damage: 2};
 dagger.onclick = function(){
     pickUpItem(hero, daggerObj);
+    displayStats(hero);
 };
 
 function equipWeapon(hero){
@@ -40,4 +42,26 @@ function equipWeapon(hero){
 const bag = document.getElementById("bag");
 bag.onclick = function(){
     equipWeapon(hero)
+    displayStats(hero)
 }
+
+function displayStats(hero){
+    
+    const stats = document.getElementById("stats");
+    const name = document.createElement("p");
+    const health = document.createElement("p");
+    const weapon = document.createElement("p");
+    const weaponDamage = document.createElement("p");
+    
+    stats.textContent = null;
+    name.textContent = `${hero.name}`
+    health.textContent = `Health-level: ${hero.health}`
+    weapon.textContent = `Weapon of choice: ${hero.weapon.type}`
+    weaponDamage.textContent = `Weapon damage: ${hero.weapon.damage}`
+    
+    stats.appendChild(name);
+    stats.appendChild(health);
+    stats.appendChild(weapon);
+    stats.appendChild(weaponDamage);
+}
+displayStats(hero)
