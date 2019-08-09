@@ -12,13 +12,12 @@ function rest(obj){
     }
     obj.health = 10;
     return obj;
-}
+};
 
 const inn = document.getElementById("inn");
 inn.onclick = function(){
     rest(hero);
 };
-
 
 function pickUpItem(hero, weapon){
     hero.inventory.push(weapon);
@@ -30,8 +29,15 @@ dagger.onclick = function(){
     pickUpItem(hero, daggerObj);
 };
 
+function equipWeapon(hero){
+    if (hero.inventory.length != 0){
+       return hero.weapon = hero.inventory[0];
+    }else{
+        return null
+    }
+}
 
-
-function equipWeapon(){
-
+const bag = document.getElementById("bag");
+bag.onclick = function(){
+    equipWeapon(hero)
 }
