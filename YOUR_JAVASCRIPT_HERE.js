@@ -3,13 +3,23 @@ const hero ={
     heroic: true,
     inventory: [],
     health: 10,
-    weapon:{type: "", damage: 2},
+    weapon:{type: "cannonballs", damage: 2},
 
 }
 
-function rest(){
-
+function rest(obj){
+    if(obj.health === 10){
+        alert("Health-level is already full")
+    }
+    obj.health = 10;
+    return obj;
 }
+
+const inn = document.getElementById("inn")
+inn.onclick = function(){
+    rest(hero);
+};
+
 
 function pickUpItem(){
 
