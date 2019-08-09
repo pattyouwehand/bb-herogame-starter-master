@@ -3,8 +3,7 @@ const hero ={
     heroic: true,
     inventory: [],
     health: 10,
-    weapon:{type: "cannonballs", damage: 2},
-
+    weapon:{type: "cannonballs", damage: 2}
 }
 
 function rest(obj){
@@ -15,15 +14,23 @@ function rest(obj){
     return obj;
 }
 
-const inn = document.getElementById("inn")
+const inn = document.getElementById("inn");
 inn.onclick = function(){
     rest(hero);
 };
 
 
-function pickUpItem(){
+function pickUpItem(hero, weapon){
+    hero.inventory.push(weapon);
+};
 
-}
+const dagger = document.getElementById("dagger");
+const daggerObj = {type: 'dagger', damage: 2};
+dagger.onclick = function(){
+    pickUpItem(hero, daggerObj);
+};
+
+
 
 function equipWeapon(){
 
