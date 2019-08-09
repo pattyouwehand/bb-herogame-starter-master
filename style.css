@@ -1,0 +1,20 @@
+#inn{
+    float: left;
+    padding: 20px;
+    width: 180px;
+    margin-top: 60px;
+}
+
+#dagger{
+    float: left;
+    padding: 20px;
+    width: 55px;
+    margin-top: 60px;
+}
+
+#bag{
+    float: left;
+    padding: 20px;
+    width: 110px;
+    margin-top: 60px;
+}
