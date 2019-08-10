@@ -65,3 +65,19 @@ function displayStats(hero){
     stats.appendChild(weaponDamage);
 }
 displayStats(hero)
+
+
+enterName.addEventListener("submit", changeName);
+function changeName(event){
+    const input = document.getElementById("herosName");
+    hero.name = input.value;    
+    event.preventDefault();
+    displayStats(hero);
+};
+
+input.addEventListener("keyup", ifEnterIsPressed);
+function ifEnterIsPressed(event) {
+    if (event.key === "Enter") {
+        changeName(event);
+    }
+};
