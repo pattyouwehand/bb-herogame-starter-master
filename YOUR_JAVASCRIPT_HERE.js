@@ -113,3 +113,23 @@ function enemyStats(enemy){
 }
 
 enemyStats(enemy)
+
+function fightEnemy(enemy){
+    if(enemy.health <= 0){
+        alert(`${hero.name} says: Muwhahaha victory is mine!!`)
+        deleteEnemy()
+    }else{        
+        return enemy.health -= hero.weapon.damage;
+    }
+}
+
+const enemyImg = document.getElementById('enemyImg');
+enemyImg.addEventListener("click", function(){
+    fightEnemy(enemy)
+    enemyStats(enemy)
+
+});
+
+function deleteEnemy(){
+    enemyImg.style.visibility="hidden";
+}
