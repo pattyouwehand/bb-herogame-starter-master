@@ -25,7 +25,7 @@ function pickUpItem(hero, weapon){
 };
 
 const dagger = document.getElementById("dagger");
-const daggerObj = {type: 'dagger', damage: 2};
+const daggerObj = {type: "dagger", damage: 2};
 dagger.onclick = function(){
     pickUpItem(hero, daggerObj);
     displayStats(hero);
@@ -64,12 +64,13 @@ function displayStats(hero){
     stats.appendChild(weapon);
     stats.appendChild(weaponDamage);
 }
+
 displayStats(hero)
 
+const input = document.getElementById("herosName");
 
 enterName.addEventListener("submit", changeName);
 function changeName(event){
-    const input = document.getElementById("herosName");
     hero.name = input.value;    
     event.preventDefault();
     displayStats(hero);
@@ -81,3 +82,34 @@ function ifEnterIsPressed(event) {
         changeName(event);
     }
 };
+
+
+let enemy = {
+    name: "Poison Ivy",
+    heroic: false,
+    inventory: [{type:"poison", damage:2}],
+    health: 10,
+    weapon: {type:"poison", damage: 2}
+};
+
+function enemyStats(enemy){
+
+    const eStats = document.getElementById("enemyStats");
+    const eName = document.createElement("p");
+    const eHealth = document.createElement("p");
+    const eWeapon = document.createElement("p");
+    const eWeaponDamage = document.createElement("p");
+
+    eStats.innerHTML = null;
+    eName.innerHTML = `${enemy.name}`;
+    eHealth.innerHTML = `Health-level: ${enemy.health}`;
+    eWeapon.innerHTML = `Weapon of choice: ${enemy.weapon.type}`;
+    eWeaponDamage.innerHTML = `Weapon damage: ${enemy.weapon.damage}`;
+    
+    eStats.appendChild(eName);
+    eStats.appendChild(eHealth);
+    eStats.appendChild(eWeapon);
+    eStats.appendChild(eWeaponDamage);
+}
+
+enemyStats(enemy)
