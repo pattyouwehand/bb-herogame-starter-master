@@ -3,12 +3,38 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Eagle+Lake&display=swap" rel="stylesheet">
 </head>
 <body>
 
 
   <!-- 👍 YOUR HTML HERE 👍 -->
+<div id="imgSection">
+  <img id="inn" src="./img/old-world-tavern.jpg">
+  <img id="dagger" src="./img/dagger.jpg">
+  <img id="bag" src="./img/old-pouch.jpg">
+  <div id="enemyStats"></div>
+  <div id="stats"></div>
+</div>
 
+<div id="fightSection">
+  <img src="img/klaasthemighty.jpeg" id="heroImg">
+  <img src="img/poison ivy.jpg" id="enemyImg">
+  <img src="img/blood.jpg" id="bloodImg" style="visibility: hidden;">
+</div>
+
+<form id="enterName">
+  <div class="userInput">
+    <input type="text" id="herosName" placeholder="Enter your hero's name">
+    <br><br>
+    <button id="submitButton" type="default">Create your hero</button>
+  </div>
+</form>
+<br><br>
+
+<button id="startGame" type="default">Play</button>
+<br><br>
 
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->

@@ -1,0 +1,84 @@
+html{
+    margin: 0 30 0 30px;
+}
+
+#imgSection{
+    width: 100%;
+    height: 200px;
+    float: left;
+}
+
+#inn{
+    float: left;
+    padding: 20px;
+    width: 180px;
+    margin-top: 60px;
+}
+
+#dagger{
+    float: left;
+    padding: 20px;
+    width: 55px;
+    margin-top: 60px;
+}
+
+#bag{
+    float: left;
+    padding: 20px;
+    width: 110px;
+    margin-top: 60px;
+}
+
+#stats, #enemyStats{
+    float: right;
+    width: 300px;
+    height: 170px;
+    margin-top: 60px;
+    margin-left: 20px;
+    border-style: solid;
+    border-width:0.5px;
+    border-color: black;
+}
+
+#enemyStats{
+    background-color: aquamarine;
+}
+#stats{
+    background-color: rgb(245, 229, 218);
+}
+
+#fightSection{
+    width: 100%;
+    height: 200px;
+    float: left;
+}
+
+#heroImg{
+    float: left;
+    padding: 20px;
+    width: 80px;
+    margin-top: 60px;
+}
+#enemyImg{
+    float: left;
+    padding: 20px;
+    width: 100px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+}
+#bloodImg{
+    width: 90px;
+    position: relative;
+    margin-top:90px;
+}
+
+p{
+    font-family: 'Eagle Lake', cursive;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+button{
+    float: left;
+}
