@@ -118,6 +118,7 @@ function fightEnemy(enemy){
     if(enemy.health <= 0){
         alert(`${hero.name} says: Muwhahaha victory is mine!!`)
         deleteEnemy()
+        addBlood()
     }else{        
         return enemy.health -= hero.weapon.damage;
     }
@@ -133,3 +134,12 @@ enemyImg.addEventListener("click", function(){
 function deleteEnemy(){
     enemyImg.style.visibility="hidden";
 }
+
+function addBlood(){
+    bloodImg.style.visibility = "visible";
+}
+
+const play = document.getElementById("startGame")
+play.addEventListener("click", function(){
+    alert("Poison Ivy is on her way to kill you. Quick, grab your dagger and take her down!")
+})

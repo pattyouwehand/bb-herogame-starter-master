@@ -64,6 +64,13 @@ html{
     padding: 20px;
     width: 100px;
     margin-top: 60px;
+    position: relative;
+    z-index: 2;
+}
+#bloodImg{
+    width: 90px;
+    position: relative;
+    margin-top:90px;
 }
 
 p{
